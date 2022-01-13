@@ -59,3 +59,24 @@ def indexhtml(request,age):
 
     result = template_obj.render(content_obj)
     return HttpResponse(result)
+
+
+##模板的第一种调用方法
+from django.template.loader import get_template
+def getindex2(request):
+    template_obj = get_template("index.html")
+    parmas = {"name":"张三","age":20}
+    result = template_obj.render(parmas)
+    return HttpResponse(result)
+
+##模板的第二种调用方法
+from django.shortcuts import render_to_response
+def getindex2(request):
+    parmas = {"name":"李四","age":20}
+    return render_to_response("index.html",parmas)
+
+##模板的第三种调用方法
+from django.shortcuts import render
+def getindex(request):
+    parmas = {"name":"王五","age":20}
+    return render(request,"index.html",parmas)

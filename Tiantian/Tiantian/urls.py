@@ -25,5 +25,6 @@ urlpatterns = [
     re_path("retest/(\d)/",retest),
     re_path("retest1/(\w*)/(\w*)/", retest1),
     re_path("indexhtml/(\d*)",indexhtml),
+    re_path("getindex/",getindex),
 
 ]

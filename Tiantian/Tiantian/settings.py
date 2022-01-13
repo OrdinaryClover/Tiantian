@@ -56,9 +56,14 @@ ROOT_URLCONF = 'Tiantian.urls'
 
 TEMPLATES = [
     {
+        #使用的模板引擎
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        ####'BACKEND': 'django.template.backends.django.jinja2',jinja2的模板引擎
+        #模板文件的目录
+        'DIRS': [os.path.join(BASE_DIR,"templates")],
+        ##是否在子应用中自动寻找模板内容
         'APP_DIRS': True,
+        ##是一些针对后端的配置
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
