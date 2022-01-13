@@ -28,3 +28,8 @@ def retest1(request,year,city):
     result01 = "我%s年在%s"%(year,city)
     result = "我在%s"%city
     return HttpResponse(result01)
+
+def retest2(request,year,city):
+    result01 = "我%s年在%s"%(year,city)
+    result = "我在%s"%city
+    return HttpResponse(result01)
